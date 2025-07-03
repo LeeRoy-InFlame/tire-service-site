@@ -80,6 +80,17 @@
       padding: 10px;
       margin-top: 20px;
     }
+    .map-wrapper {
+    margin: 20px;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+
+  iframe.map {
+    width: 100%;
+    height: 300px;
+    border: none;
+  }
   </style>
 </head>
 <body>
@@ -291,7 +302,22 @@
   <a class="button" href="tel:+79963443630">Позвонить</a><br>
   <a class="button" href="https://2gis.ru/okha/geo/70000001054227027" target="_blank">Открыть в 2ГИС</a>
 </section>
+<div class="map-wrapper">
+  <iframe class="map" 
+    src="https://yandex.ru/map-widget/v1/?um=constructor%3Aab6e5cc35177105ef31d4b94d861f9be58b68be88abf4e6fd280ac04a336a559&amp;source=constructor"
+    allowfullscreen>
+  </iframe>
+</div>
 
+<script>
+  const header = document.querySelector("header");
+  const images = ["image/fon1.jpg", "image/fon2.jpg", "image/fon3.jpg"];
+  let index = 0;
+  setInterval(() => {
+    index = (index + 1) % images.length;
+    header.style.backgroundImage = `url('${images[index]}')`;
+  }, 3000);
+</script>
 <footer>
   © 2025 Шиномонтаж EVVA bunker
 </footer>
