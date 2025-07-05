@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
+<!-- Yandex.RTB -->
+<script>window.yaContextCb=window.yaContextCb||[]</script>
+<script src="https://yandex.ru/ads/system/context.js" async></script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Шиномонтаж EVVA bunker</title>
@@ -274,9 +277,22 @@
 </div>
 </section>
 
+<!-- Yandex.RTB R-A-16145172-1 -->
+<script>
+window.yaContextCb.push(() => {
+    Ya.Context.AdvManager.render({
+        "blockId": "R-A-16145172-1",
+        "type": "floorAd",
+        "platform": "desktop"
+    })
+})
+</script>
+
 <footer>
   <p>© 2025 Шиномонтаж EVVA bunker</p>
 </footer>
+
+
 <script>
   const header = document.querySelector("header");
   const images = [
@@ -295,5 +311,6 @@
     header.style.backgroundImage = `url('${images[index]}')`;
   }, 3000);
 </script>
+
 </body>
 </html>
